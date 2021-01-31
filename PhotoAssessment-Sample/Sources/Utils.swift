@@ -182,16 +182,16 @@ extension UInt32 {
 extension MTLDevice {
     func supportNonuniformThreadgroupSize() -> Bool {
         #if os(iOS)
-        if #available(iOS 12.0, *) {
-            if supportsFeatureSet(.iOS_GPUFamily4_v2) {
-                return true
-            }
-            if supportsFeatureSet(.iOS_GPUFamily5_v1) {
-                return true
-            }
-        } else if supportsFeatureSet(.iOS_GPUFamily4_v1) {
-            return true
-        }
+//        if #available(iOS 12.0, *) {
+//            if supportsFeatureSet(.iOS_GPUFamily4_v2) {
+//                return true
+//            }
+//            if supportsFeatureSet(.iOS_GPUFamily5_v1) {
+//                return true
+//            }
+//        } else if supportsFeatureSet(.iOS_GPUFamily4_v1) {
+//            return true
+//        }
         #elseif os(macOS)
         if #available(OSX 10.14, *) {
             if supportsFeatureSet(.macOS_GPUFamily1_v4) {
